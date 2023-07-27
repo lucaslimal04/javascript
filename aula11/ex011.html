@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex009 em HTML</title>
+</head>
+<body>
+    
+<h1>Qual país você mora?</h1>
+    <input type="text" name="pais" id="pais">
+    <input type="button" value="Verificar" onclick="calcular()">
+    <div id="res"></div>
+
+    <script>
+        function calcular() {
+    var país = document.getElementById('pais').value
+    
+    var res = document.getElementById('res')
+    res.innerHTML = `Você é ${país}`
+
+    if(país == 'Brasil') {
+        res.innerHTML = `Brasileiro`
+    }
+    
+    if(país == 'França') {
+        res.innerHTML = `Francês`
+    }
+
+    else {
+        res.innerHTML = `Estrangeiro`
+    }
+    
+}
+    </script>
+</body>
+</html>
